@@ -14,15 +14,12 @@ from sly import Lexer, Parser
 class ConfLexer(Lexer):
     tokens = {BEGIN, END, NAME, INTEGER, STRING}
     BEGIN = r'\('
-   
-    ignore = r' \t'
-    ignore_newline = r'\n'
+    END = r'\)' 
     NAME = r'[^ \(\)0123456789\t\nйцукенгшщзхъфывапролджэячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮЁ]+'
     STRING = r'[^\(\)\t\#\nqwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM]+'
     INTEGER = r'[0123456789]+'
-    
-   
-    END = r'\)' 
+    ignore = r' \t'
+    ignore_newline = r'\n'
 
 
 class ConfParser(Parser):
