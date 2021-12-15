@@ -1,379 +1,276 @@
 [
   {
-    "type": "simple",
     "args": [
-      "user",
-      "www",
-      "www"
-    ],
-    "ctx": []
-  },
-  {
-    "type": "simple",
-    "args": [
-      "worker_processes",
-      "5"
-    ],
-    "ctx": []
-  },
-  {
-    "type": "simple",
-    "args": [
-      "error_log",
-      "logs/error.log"
-    ],
-    "ctx": []
-  },
-  {
-    "type": "simple",
-    "args": [
-      "pid",
-      "logs/nginx.pid"
-    ],
-    "ctx": []
-  },
-  {
-    "type": "simple",
-    "args": [
-      "worker_rlimit_nofile",
-      "8192"
-    ],
-    "ctx": []
-  },
-  {
-    "type": "block",
-    "args": [
-      "events"
-    ],
-    "ctx": [
+      "groups",
       {
-        "type": "simple",
         "args": [
-          "worker_connections",
-          "4096"
-        ],
-        "ctx": []
+          "group",
+          [
+            "����-1-20"
+          ]
+        ]
+      },
+      {
+        "args": [
+          "group",
+          [
+            "����-2-20"
+          ]
+        ]
+      },
+      {
+        "args": [
+          "group",
+          [
+            "����-3-20"
+          ]
+        ]
+      },
+      {
+        "args": [
+          "group",
+          [
+            "����-4-20"
+          ]
+        ]
+      },
+      {
+        "args": [
+          "group",
+          [
+            "����-5-20"
+          ]
+        ]
+      },
+      {
+        "args": [
+          "group",
+          [
+            "����-6-20"
+          ]
+        ]
+      },
+      {
+        "args": [
+          "group",
+          [
+            "����-7-20"
+          ]
+        ]
+      },
+      {
+        "args": [
+          "group",
+          [
+            "����-8-20"
+          ]
+        ]
+      },
+      {
+        "args": [
+          "group",
+          [
+            "����-9-20"
+          ]
+        ]
+      },
+      {
+        "args": [
+          "group",
+          [
+            "����-10-20"
+          ]
+        ]
+      },
+      {
+        "args": [
+          "group",
+          [
+            "����-11-20"
+          ]
+        ]
+      },
+      {
+        "args": [
+          "group",
+          [
+            "����-12-20"
+          ]
+        ]
+      },
+      {
+        "args": [
+          "group",
+          [
+            "����-13-20"
+          ]
+        ]
+      },
+      {
+        "args": [
+          "group",
+          [
+            "����-14-20"
+          ]
+        ]
+      },
+      {
+        "args": [
+          "group",
+          [
+            "����-15-20"
+          ]
+        ]
+      },
+      {
+        "args": [
+          "group",
+          [
+            "����-16-20"
+          ]
+        ]
+      },
+      {
+        "args": [
+          "group",
+          [
+            "����-17-20"
+          ]
+        ]
+      },
+      {
+        "args": [
+          "group",
+          [
+            "����-18-20"
+          ]
+        ]
+      },
+      {
+        "args": [
+          "group",
+          [
+            "����-19-20"
+          ]
+        ]
+      },
+      {
+        "args": [
+          "group",
+          [
+            "����-20-20"
+          ]
+        ]
+      },
+      {
+        "args": [
+          "group",
+          [
+            "����-21-20"
+          ]
+        ]
+      },
+      {
+        "args": [
+          "group",
+          [
+            "����-22-20"
+          ]
+        ]
+      },
+      {
+        "args": [
+          "group",
+          [
+            "����-23-20"
+          ]
+        ]
       }
     ]
   },
   {
-    "type": "block",
     "args": [
-      "http"
-    ],
-    "ctx": [
+      "students",
       {
-        "type": "simple",
         "args": [
-          "include",
-          "conf/mime.types"
-        ],
-        "ctx": []
-      },
-      {
-        "type": "simple",
-        "args": [
-          "include",
-          "/etc/nginx/proxy.conf"
-        ],
-        "ctx": []
-      },
-      {
-        "type": "simple",
-        "args": [
-          "include",
-          "/etc/nginx/fastcgi.conf"
-        ],
-        "ctx": []
-      },
-      {
-        "type": "simple",
-        "args": [
-          "index",
-          "index.html",
-          "index.htm",
-          "index.php"
-        ],
-        "ctx": []
-      },
-      {
-        "type": "simple",
-        "args": [
-          "default_type",
-          "application/octet-stream"
-        ],
-        "ctx": []
-      },
-      {
-        "type": "simple",
-        "args": [
-          "log_format",
-          "main",
-          "'$remote_addr - $remote_user [$time_local]  $status '",
-          "'\"$request\" $body_bytes_sent \"$http_referer\" '",
-          "'\"$http_user_agent\" \"$http_x_forwarded_for\"'"
-        ],
-        "ctx": []
-      },
-      {
-        "type": "simple",
-        "args": [
-          "access_log",
-          "logs/access.log",
-          "main"
-        ],
-        "ctx": []
-      },
-      {
-        "type": "simple",
-        "args": [
-          "sendfile",
-          "on"
-        ],
-        "ctx": []
-      },
-      {
-        "type": "simple",
-        "args": [
-          "cp_nopush",
-          "on"
-        ],
-        "ctx": []
-      },
-      {
-        "type": "simple",
-        "args": [
-          "server_names_hash_bucket_size",
-          "128"
-        ],
-        "ctx": []
-      },
-      {
-        "type": "block",
-        "args": [
-          "server"
-        ],
-        "ctx": [
           {
-            "type": "simple",
             "args": [
-              "listen",
-              "80"
-            ],
-            "ctx": []
+              "age",
+              [
+                "19"
+              ]
+            ]
           },
           {
-            "type": "simple",
             "args": [
-              "server_name",
-              "domain1.com",
-              "www.domain1.com"
-            ],
-            "ctx": []
+              "group",
+              [
+                "����-4-20"
+              ]
+            ]
           },
           {
-            "type": "simple",
             "args": [
-              "access_log",
-              "logs/domain1.access.log",
-              "main"
-            ],
-            "ctx": []
-          },
-          {
-            "type": "simple",
-            "args": [
-              "root",
-              "html"
-            ],
-            "ctx": []
-          },
-          {
-            "type": "block",
-            "args": [
-              "location",
-              "~",
-              ".php$"
-            ],
-            "ctx": [
-              {
-                "type": "simple",
-                "args": [
-                  "fastcgi_pass",
-                  "127.0.0.1:1025"
-                ],
-                "ctx": []
-              }
+              "name",
+              [
+                "������ �.�."
+              ]
             ]
           }
         ]
       },
       {
-        "type": "block",
         "args": [
-          "server"
-        ],
-        "ctx": [
           {
-            "type": "simple",
             "args": [
-              "listen",
-              "80"
-            ],
-            "ctx": []
-          },
-          {
-            "type": "simple",
-            "args": [
-              "server_name",
-              "domain2.com",
-              "www.domain2.com"
-            ],
-            "ctx": []
-          },
-          {
-            "type": "simple",
-            "args": [
-              "access_log",
-              "logs/domain2.access.log",
-              "main"
-            ],
-            "ctx": []
-          },
-          {
-            "type": "block",
-            "args": [
-              "location",
-              "~",
-              "^/(images|javascript|js|css|flash|media|static)/"
-            ],
-            "ctx": [
-              {
-                "type": "simple",
-                "args": [
-                  "root",
-                  "/var/www/virtual/big.server.com/htdocs"
-                ],
-                "ctx": []
-              },
-              {
-                "type": "simple",
-                "args": [
-                  "expires",
-                  "30d"
-                ],
-                "ctx": []
-              }
+              "age",
+              [
+                "18"
+              ]
             ]
           },
           {
-            "type": "block",
             "args": [
-              "location",
-              "/"
-            ],
-            "ctx": [
-              {
-                "type": "simple",
-                "args": [
-                  "proxy_pass",
-                  "http://127.0.0.1:8080"
-                ],
-                "ctx": []
-              }
+              "group",
+              [
+                "����-5-20"
+              ]
+            ]
+          },
+          {
+            "args": [
+              "name",
+              [
+                "������ �.�."
+              ]
             ]
           }
         ]
       },
       {
-        "type": "block",
         "args": [
-          "upstream",
-          "big_server_com"
-        ],
-        "ctx": [
           {
-            "type": "simple",
             "args": [
-              "server",
-              "127.0.0.3:8000",
-              "weight=5"
-            ],
-            "ctx": []
+              "age",
+              [
+                "18"
+              ]
+            ]
           },
           {
-            "type": "simple",
             "args": [
-              "server",
-              "127.0.0.3:8001",
-              "weight=5"
-            ],
-            "ctx": []
+              "group",
+              [
+                "����-5-20"
+              ]
+            ]
           },
           {
-            "type": "simple",
             "args": [
-              "server",
-              "192.168.0.1:8000"
-            ],
-            "ctx": []
-          },
-          {
-            "type": "simple",
-            "args": [
-              "server",
-              "192.168.0.1:8001"
-            ],
-            "ctx": []
-          }
-        ]
-      },
-      {
-        "type": "block",
-        "args": [
-          "server"
-        ],
-        "ctx": [
-          {
-            "type": "simple",
-            "args": [
-              "listen",
-              "80"
-            ],
-            "ctx": []
-          },
-          {
-            "type": "simple",
-            "args": [
-              "server_name",
-              "big.server.com"
-            ],
-            "ctx": []
-          },
-          {
-            "type": "simple",
-            "args": [
-              "access_log",
-              "logs/big.server.access.log",
-              "main"
-            ],
-            "ctx": []
-          },
-          {
-            "type": "block",
-            "args": [
-              "location",
-              "/"
-            ],
-            "ctx": [
-              {
-                "type": "simple",
-                "args": [
-                  "proxy_pass",
-                  "http://big_server_com"
-                ],
-                "ctx": []
-              }
+              "name",
+              [
+                "������� �.�."
+              ]
             ]
           }
         ]
